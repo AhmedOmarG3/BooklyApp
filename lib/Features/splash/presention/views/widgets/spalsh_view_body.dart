@@ -1,3 +1,4 @@
+import 'package:bookly/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class SpalshViewBody extends StatelessWidget {
@@ -5,10 +6,11 @@ class SpalshViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.blueAccent,
-      ),
+    return Center(
+      
+      child:
+        Image.asset(AssetsData.logo)
+      
     );
   }
 }
