@@ -1,6 +1,10 @@
 import 'package:bookly/Core/utils/assets.dart';
+import 'package:bookly/Features/home/presention/views/home_view.dart';
 import 'package:bookly/Features/splash/presention/views/widgets/sliding_text.dart';
+import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 
 class SpalshViewBody extends StatefulWidget {
   const SpalshViewBody({super.key});
@@ -9,25 +13,31 @@ class SpalshViewBody extends StatefulWidget {
   State<SpalshViewBody> createState() => _SpalshViewBodyState();
 }
 
-class _SpalshViewBodyState extends State<SpalshViewBody> with SingleTickerProviderStateMixin {
-  @override
-  
- late AnimationController animationController;
- late Animation<Offset> animation;
+class _SpalshViewBodyState extends State<SpalshViewBody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+  late Animation<Offset> animation;
 
- @override
- void initState() {
-    animationController=AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    animation=Tween<Offset>(begin:const  Offset(0,2),end: const Offset(0,0)).animate(animationController);
-    animationController.forward();
+  @override
+  void initState() {
     super.initState();
+    initSlidingAnimation();
+    navigateToHome();
   }
+
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(() => const HomeView(),
+          transition: Transition.fadeIn, duration: kduration);
+    });
+  }
+
   @override
   void dispose() {
     animationController.dispose();
     super.dispose();
   }
- 
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -38,5 +48,14 @@ class _SpalshViewBodyState extends State<SpalshViewBody> with SingleTickerProvid
         SlidingText(animation: animation),
       ],
     );
+  }
+
+  void initSlidingAnimation() {
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    animation =
+        Tween<Offset>(begin: const Offset(0, 2), end: const Offset(0, 0))
+            .animate(animationController);
+    animationController.forward();
   }
 }
