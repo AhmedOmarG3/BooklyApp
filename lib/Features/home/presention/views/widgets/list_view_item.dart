@@ -1,4 +1,4 @@
-import 'package:bookly/constants.dart';
+
 import 'package:flutter/material.dart';
 
 class ListViewItem extends StatelessWidget {
@@ -9,7 +9,7 @@ class ListViewItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10),
       child: SizedBox(
-        height: hieght(context) * .25,
+        
         child: AspectRatio(
           aspectRatio: 2.5 / 4,
           child: Container(
