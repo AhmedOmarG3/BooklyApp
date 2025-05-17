@@ -22,7 +22,7 @@ class HomeViewBody extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          const Text('Best Seller', style: Styles.mediumTitle),
+          const Text('Best Seller', style: Styles.titleSize20),
           Expanded(
               child: ListView.builder(
             itemBuilder: (context, index) => const Padding(

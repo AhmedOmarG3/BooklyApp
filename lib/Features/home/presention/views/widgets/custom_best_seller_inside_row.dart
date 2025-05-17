@@ -1,3 +1,4 @@
+import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomBestSellerInsideRow extends StatelessWidget {
@@ -21,14 +22,14 @@ class CustomBestSellerInsideRow extends StatelessWidget {
               )),
           const Text(
             '4.8',
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            style: Styles.titleSize15,
           ),
           const SizedBox(
             width: 5,
           ),
-          const Text(
+          Text(
             '(334)',
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+            style: Styles.titleSize15.copyWith(fontWeight: FontWeight.w400),
           )
         ]);
   }

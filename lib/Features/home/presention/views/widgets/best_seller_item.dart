@@ -8,22 +8,24 @@ class BestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         CustomBestSellerContainer(),
-         SizedBox(
+        SizedBox(
           width: 15,
         ),
-         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text('Harry Potter \nand the Philosopher\'s ',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-          Text('J.K Rowling', style: TextStyle(fontSize: 12)),
-          Text(
-            '199\$',
-            style: Styles.mediumTitle,
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Text('Harry Potter \nand the Philosopher\'s ',
+              style: Styles.titleSize18),
+          Text('J.K Rowling',
+              style: Styles.titleSize18
+                  .copyWith(fontSize: 14, fontWeight: FontWeight.w400)),
+          const Text(
+            '199 €',
+            style: Styles.titleSize20,
           )
         ]),
-        CustomBestSellerInsideRow()
+        const CustomBestSellerInsideRow()
       ],
     );
   }
