@@ -13,7 +13,7 @@ class FeaturedListView extends StatelessWidget {
       height: hieght(context) * .25,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: 3,
+        itemCount: 6,
         itemBuilder: (context, index) =>const ListViewItem(),
       ),
     );

@@ -26,6 +26,7 @@ class BestSellerItem extends StatelessWidget {
                   'Harry Potter and the Philosopher\'s Stone',
                   style: Styles.titleSize18),
             ),
+
             SizedBox(
               height: 3,
             ),
@@ -44,7 +45,9 @@ class BestSellerItem extends StatelessWidget {
             )
           ]),
         ),
+       
+
       ],
-    );
+    ); 
   }
 }
