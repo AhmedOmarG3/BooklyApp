@@ -10,6 +10,6 @@ abstract class Styles {
   static const titleSize18 = TextStyle(
       fontSize: 18, fontWeight: FontWeight.bold, fontFamily: kFontFamily);
 
-  static const titleSize15 =
-      TextStyle(fontSize: 15, fontWeight: FontWeight.bold);
+  static const titleSize16 =
+      TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
 }
