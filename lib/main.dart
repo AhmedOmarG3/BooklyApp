@@ -1,4 +1,4 @@
-import 'package:bookly/Features/splash/presention/views/splash_view.dart';
+
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
