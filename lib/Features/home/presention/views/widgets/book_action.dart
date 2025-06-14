@@ -1,4 +1,3 @@
-
 import 'package:bookly/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -14,14 +13,14 @@ class BookAction extends StatelessWidget {
           buttonColor: Colors.white,
           bottomLeftRadius: 12,
           topLeftRadius: 12,
-          text: '199 €',
+          text: '199.99 €',
           textColor: Colors.black,
         ),
         CustomButton(
           buttonColor: Color(0xffF0825F),
           bottomRightRadius: 12,
           topRightRadius: 12,
-          text: 'the Jungle Book ',
+          text: 'Free Preview',
           textColor: Colors.white,
         )
       ],
