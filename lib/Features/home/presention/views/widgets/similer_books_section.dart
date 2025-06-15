@@ -9,22 +9,22 @@ class SimilerBooksSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-         Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('you can also like', style: Styles.titleSize16),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    SimilerListView(),
-                    SizedBox(
-                      height: 30,
-                    )
-                  ],
-                ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('you can also like', style: Styles.titleSize16),
+              SizedBox(
+                height: 10,
               ),
+              SimilerListView(),
+              SizedBox(
+                height: 30,
+              )
+            ],
+          ),
+        ),
       ],
     );
   }

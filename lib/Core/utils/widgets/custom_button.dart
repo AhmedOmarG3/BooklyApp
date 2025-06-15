@@ -24,8 +24,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      style:
-      ButtonStyle(
+      style: ButtonStyle(
         fixedSize: WidgetStatePropertyAll(
             Size(width(context) * 0.45, hieght(context) * 0.06)),
         backgroundColor: WidgetStatePropertyAll(buttonColor),

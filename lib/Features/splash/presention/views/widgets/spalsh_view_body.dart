@@ -25,7 +25,6 @@ class _SpalshViewBodyState extends State<SpalshViewBody>
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      
       GoRouter.of(context).push(HomeView.routeName);
     });
   }

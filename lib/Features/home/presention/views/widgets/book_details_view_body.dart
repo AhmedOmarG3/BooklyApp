@@ -27,7 +27,7 @@ class BookDetailsViewBody extends StatelessWidget {
                   height: 10,
                 ),
               ),
-             SimilerBooksSection()
+              SimilerBooksSection()
             ],
           ),
         ),
