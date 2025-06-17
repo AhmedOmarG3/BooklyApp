@@ -1,6 +1,10 @@
+import 'package:bookly/Features/home/presention/manager/featured_cubit/featured_books_cubit.dart';
 import 'package:bookly/Features/home/presention/views/widgets/list_view_item.dart';
 import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/widgets/custom_error_messege.dart';
+import 'package:bookly/core/utils/widgets/custom_progress_indecator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FeaturedListView extends StatelessWidget {
   const FeaturedListView({
@@ -9,13 +13,23 @@ class FeaturedListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: hieght(context) * .25,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 6,
-        itemBuilder: (context, index) => const ListViewItem(),
-      ),
+    return BlocBuilder<FeaturedBooksCubit, FeaturedBooksCubitState>(
+      builder: (context, state) {
+        if (state is FeaturedBooksSuccessState) {
+  return SizedBox(
+    height: hieght(context) * .25,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: state.books.length,
+      itemBuilder: (context, index) =>  ListViewItem(bookModel: state.books[index],),
+    ),
+  );
+}else if(state is FeaturedBooksFailureState){
+  return CustomErrorMessege(errMessage: state.errMessage);
+}else{
+  return const CustomProgressIndecator();
+}
+      },
     );
   }
 }

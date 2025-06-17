@@ -1,4 +1,4 @@
-part of 'best_seller_cubit_cubit.dart';
+part of 'best_seller_cubit.dart';
 
 sealed class BestSellerCubitState extends Equatable {
   const BestSellerCubitState();

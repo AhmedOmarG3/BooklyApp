@@ -5,8 +5,8 @@ import 'package:equatable/equatable.dart';
 
 part 'best_seller_cubit_state.dart';
 
-class BestSellerCubitCubit extends Cubit<BestSellerCubitState> {
-  BestSellerCubitCubit(this.homeRepo) : super(BestSellerCubitInitial());
+class BestSellerCubit extends Cubit<BestSellerCubitState> {
+  BestSellerCubit(this.homeRepo) : super(BestSellerCubitInitial());
   final HomeRepo homeRepo;
 
   Future<void> fetchBestSellerBooks() async {

@@ -1,8 +1,9 @@
+import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class ListViewItem extends StatelessWidget {
-  const ListViewItem({super.key});
-
+  const ListViewItem( {super.key,  this.bookModel});
+final BookModel? bookModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,10 +15,11 @@ class ListViewItem extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
-                image: const DecorationImage(
+                image:  DecorationImage(
                     fit: BoxFit.fill,
                     image: NetworkImage(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMWpI_1xWnLdkJTZImTfDUCUbwyaU5Ayb_edh8Tx0GHonBdQ3V8_lxg-9Ym94ziX2yH0w&usqp=CAU'))),
+                      bookModel!.volumeInfo!.imageLinks?.thumbnail ??
+                          'https://via.placeholder.com/150'))),
           ),
         ),
       ),
