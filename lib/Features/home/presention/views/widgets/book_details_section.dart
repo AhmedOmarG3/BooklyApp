@@ -11,7 +11,7 @@ class BookDetailsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 300, child: ListViewItem()),
+        const SizedBox(height: 300, child: ListViewItem(imageUrl: 'https://www.noor-book.com/publice/covers_cache_webp/2/8/b/9/0e368e83428b9cbd70f7a502d2c1b3e3.jpg.webp',)),
         const SizedBox(
           height: 20,
         ),

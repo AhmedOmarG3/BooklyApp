@@ -21,7 +21,7 @@ class FeaturedListView extends StatelessWidget {
     child: ListView.builder(
       scrollDirection: Axis.horizontal,
       itemCount: state.books.length,
-      itemBuilder: (context, index) =>  ListViewItem(bookModel: state.books[index],),
+      itemBuilder: (context, index) =>  ListViewItem(imageUrl: state.books[index].volumeInfo!.imageLinks!.thumbnail!,),
     ),
   );
 }else if(state is FeaturedBooksFailureState){
