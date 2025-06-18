@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ class RatingRow extends StatelessWidget {
     super.key,
     this.mainAxisAlignment = MainAxisAlignment.start,
   });
+  
   final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
@@ -21,8 +23,8 @@ class RatingRow extends StatelessWidget {
               Icons.star,
               color: Colors.yellow,
             )),
-        const Text(
-          '4.8',
+         Text(
+         '4.8',
           style: Styles.titleSize16,
         ),
         const SizedBox(

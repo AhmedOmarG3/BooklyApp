@@ -21,31 +21,31 @@ class HomeRepoImpelement implements HomeRepo {
         books.add(BookModel.fromJson(item));
       }
       return right(books);
-    }  catch (e) {
+    } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.fromDioException(e));
-      }else{
-        return left(ServerFailure( message: e.toString()));
+      } else {
+        return left(ServerFailure(message: e.toString()));
       }
     }
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchBNewsetBooks() async{
+  Future<Either<Failure, List<BookModel>>> fetchBNewsetBooks() async {
     try {
       var data = await apiService.get(
-        endpoint: 'volumes?Filtering=free-ebooks&q=subject:Flutter development',
+        endpoint: 'volumes?Filtering=free-ebooks&q=subject:Flutter',
       );
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
       }
       return right(books);
-    }  catch (e) {
+    } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.fromDioException(e));
-      }else{
-        return left(ServerFailure( message: e.toString()));
+      } else {
+        return left(ServerFailure(message: e.toString()));
       }
     }
   }
